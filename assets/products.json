@@ -1,27 +1,27 @@
-[
-    {
+{
+    [
         "id": 1,
         "product": "Nike Air Max 270",
         "price": 140,
         "image_url": "assets/img/shoe_one.png"
-    },
-    {
+    ],
+    [
         "id": 2,
         "product": "Nike Air Max 370",
         "price": 170,
         "image_url": "assets/img/shoe_one.png"
-    },
-    {
+    ],
+    [
         "id": 3,
         "product": "Nike Air Max 470",
         "price": 90,
         "image_url": "assets/img/shoe_one.png"
-    },
-    {
+    ],
+    [
         "id": 4,
         "product": "Nike Air Max 570",
         "price": 230,
         "image_url": "assets/img/shoe_one.png"
-    }
+    ]
     
- ]
+}
