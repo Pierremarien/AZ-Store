@@ -20,15 +20,15 @@
 
     <div>    
         <label for="city">City:</label>
-        <input type="text" name="city" id="city" minlength="3" required>
+        <input type="text" name="city" id="city" minlength="3" maxlength="20" required>
 
         <label for="zipCode">Zip Code:</label>
-        <input type="number" name="zipCode" id="zipCode" minlength="3" required>
+        <input type="number" name="zipCode" id="zipCode" minlength="3" maxlength="20" required>
     </div>
 
     <div>
         <label for="country">Country:</label>
-        <input type="text" name="country" id="country" minlength="3" required>
+        <input type="text" name="country" id="country" minlength="3" maxlength="20" required>
     </div>
     
     <div>
