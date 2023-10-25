@@ -1,6 +1,5 @@
 <?php
 ?>
-
 <form method="POST" action="checkoutSanitize.php" class="form">
     <div>
         <label for="firstName">Firstname:</label>
