@@ -6,3 +6,4 @@
     <title>AZ-Store</title>
     <link rel="stylesheet" href="../../scss/style.css">
 </head>
+<body> 

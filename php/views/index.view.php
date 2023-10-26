@@ -2,13 +2,13 @@
 require "partials/head.php";
 ?>
 
-<body>
+
     <header>
         <?php
         require "partials/nav.php";
         ?>
         <div>
-            <h1>Shoe the right <span>one</span></h1>
+            <h1>Shoe the right <span class="blue">one</span></h1>
             <button>See our store</button>
         </div>
         <div>
@@ -20,7 +20,7 @@ require "partials/head.php";
     </header>
     <main>
         <section>
-            <h3><span>Our</span> last products</h3>
+            <h3><span class="blue">Our</span> last products</h3>
             
             <?php
             
@@ -48,7 +48,7 @@ require "partials/head.php";
             <figure>
                 <img src="../../assets/img/shoe_two.png" alt="our second best shoe">
             </figure>
-            <h2>We provide you the <span>best</span> quality</h2>
+            <h2>We provide you the <span class="blue">best</span> quality</h2>
             <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae mollitia cum saepe consequatur iste odio magni adipisci odit nulla, quae omnis a?"</p>
         </section>
         <section>
@@ -78,6 +78,4 @@ require "partials/head.php";
    <?php
    require "partials/footer.php";
    ?>
-</body>
-</html>
 
