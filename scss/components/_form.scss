@@ -1,0 +1,22 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #192231;
+    gap: 1rem;
+    width: 45%;
+    padding: 1em 0;
+    div{
+        display : flex;
+        gap: 1rem;
+        label{
+            color: #e5e7eb;
+        }
+        input{
+            background-color: #3b82f6;
+            color: #e5e7eb;
+            border: none;
+
+        }
+        
+    }
+}
