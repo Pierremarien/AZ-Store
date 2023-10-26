@@ -35,7 +35,7 @@ require "partials/head.php";
                     echo '<p>' . $product['product'] . '</p>';
                     echo '<img src="../../' . $product['image_url'] . '" alt="' . $product['product'] . '">';
                     echo '<p>Price: $' . $product['price'] . '</p>';
-                    echo '<button>Add to Cart</button>';
+                    echo "<a href=\"../add-to-session.php?id={$product['id']}\">Add to cart</a>";
                     echo '</div>';
                 }
             } else {
