@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -65,4 +66,18 @@ input {
   background-color: #3b82f6;
   color: #e5e7eb;
   border: none;
+  font-family: "Roboto", sans-serif;
+}
+.form div #zipCode {
+  -moz-appearance: textfield;
+  /* Chrome */
+  /* Opéra*/
+}
+.form div #zipCode::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form div #zipCode::-o-inner-spin-button {
+  -o-appearance: none;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
