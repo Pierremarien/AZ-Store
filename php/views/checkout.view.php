@@ -48,7 +48,7 @@ function sanitizeValidation ($_post) {
         echo "A valide last name is required";
     }
 
-    if (isset($_POST["email"]) and !empty($_POST["email"]) and filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+    if (isset($_POST["email"]) and !empty($_POST["email"]) and filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) and preg_match("/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/", $_POST["email"])) {
         $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     } else {
         echo "A valide email is required";
