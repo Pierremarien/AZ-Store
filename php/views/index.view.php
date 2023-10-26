@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "partials/head.php";
 ?>
 
@@ -41,6 +42,12 @@ require "partials/head.php";
             } else {
                 echo 'Error parsing JSON data.';
             }
+            echo 'CEST ICI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!';
+            echo '<pre>' ;
+            print_r($_SESSION);
+            echo '</pre>';
+            echo 'ICI AUSSI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!';
+
             ?>
 
         </section>
