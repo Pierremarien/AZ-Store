@@ -1,5 +1,5 @@
 <?php
-require ("./checkoutFormInfo.php");
+require "./checkoutFormInfo.php";
 
 
 function sanitize ($_post) {

@@ -1,6 +1,6 @@
 <?php
 ?>
-<form method="POST" action="checkoutSanitize.php" class="form">
+<form method="POST" action="../checkout.view.php" class="form">
     <div>
         <label for="firstName">Firstname:</label>
         <input type="text" name="firstName" id="firstName" minlength="3" maxlength="20" required>
