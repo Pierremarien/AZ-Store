@@ -1,18 +1,18 @@
 <?php
 session_start();
 //unset($_SESSION['article']);
-unset($_SESSION['article'][3]);
+//unset($_SESSION['article'][3]);
 $productsJson = file_get_contents('../assets/products.json');
 $products = json_decode($productsJson, true);
 $total = 0;
 
-echo '<pre>' ;
-print_r($products);
-echo '</pre>';
+// echo '<pre>' ;
+// print_r($products);
+// echo '</pre>';
 
-echo '<pre>' ;
-print_r($_SESSION);
-echo '</pre>';
+// echo '<pre>' ;
+// print_r($_SESSION);
+// echo '</pre>';
 
 if (($products !== null) AND (isset($_SESSION['article'])) AND (!empty($_SESSION['article']))) {
     foreach ($_SESSION['article'] as $id => $quantity) { ?>
@@ -32,20 +32,7 @@ if (($products !== null) AND (isset($_SESSION['article'])) AND (!empty($_SESSION
     <p class="totalPrice"><?= $total ?></p>
     <?php
     
+    } else {
+        echo 'Error parsing JSON data.';
     }?>
 
-
-
-
-<!-- 
-        
-        echo '<div class="product">';
-        echo '<p>' . $product['product'] . '</p>';
-        echo '<img src="../../' . $product['image_url'] . '" alt="' . $product['product'] . '">';
-        echo '<p>Price: $' . $product['price'] . '</p>';
-        echo "<a href=\"../add-to-session.php?id={$product['id']}\">Add to cart</a>";
-        echo '</div>';
-    }
-} else {
-    echo 'Error parsing JSON data.';
-} -->
