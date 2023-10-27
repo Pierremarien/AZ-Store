@@ -105,6 +105,36 @@ input {
   background: linear-gradient(264deg, rgb(30, 59, 140) 21%, rgb(58, 126, 241) 68%);
 }
 
+nav {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #192231;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+nav div ul {
+  display: flex;
+  gap: 8px;
+}
+nav div h5 {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-left: 3em;
+}
+
+.navbar_right {
+  margin-right: 3em;
+}
+
 body {
   background: rgb(0, 0, 0);
   background: radial-gradient(circle, rgb(0, 0, 0) 4%, rgb(17, 24, 39) 85%);

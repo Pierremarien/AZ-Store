@@ -5,15 +5,15 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a class="nav_link" href="#">Home</a></li>
+                    <li><a class="nav_link" href="#">About</a></li>
+                    <li><a class="nav_link" href="#">Product</a></li>
+                    <li><a class="nav_link" href="#">Contact</a></li>
                 </ul>
             </div>
-            <div>
-            <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-            width="800px" height="800px" viewBox="0 0 902.86 902.86"
+            <div class="navbar_right">
+            <svg fill="#e5e7eb" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+            width="27px" height="27px" viewBox="0 0 902.86 902.86"
             xml:space="preserve">
             <g>
                 <g>
