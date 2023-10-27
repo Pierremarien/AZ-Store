@@ -374,24 +374,21 @@ a {
   margin: 0 10% 0 0;
 }
 
-.latest_products {
-  padding-left: 180px;
-  padding-right: 180px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.pub {
+  width: 50%;
+  margin: auto;
 }
-.latest_products h3 {
-  font-size: 2em;
-  font-weight: 700;
+.pub__img {
+  display: block;
+  margin: auto;
 }
-.latest_products_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.pub__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 65px;
+  font-weight: bold;
 }
-.latest_products::before {
-  content: "";
-  border-bottom: 2px solid #192231;
-  width: 100%;
+.pub__text {
+  margin: 20px 0 0 0;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

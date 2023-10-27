@@ -52,10 +52,10 @@ require "partials/head.php";
         </section>
         <section class="pub">
             <figure>
-                <img src="../assets/img/shoe_two.png" alt="our second best shoe">
+                <img class="pub__img" src="../assets/img/shoe_two.png" alt="our second best shoe" width="350">
             </figure>
-            <h2>We provide you the <span class="blue">best</span> quality</h2>
-            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae mollitia cum saepe consequatur iste odio magni adipisci odit nulla, quae omnis a?"</p>
+            <h2 class="pub__title">We provide you the <span class="blue">best</span>quality</h2>
+            <p class="pub__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae mollitia cum saepe consequatur iste odio magni adipisci odit nulla, quae omnis a?"</p>
         </section>
         <section class="partners">
             <div class="partner">
