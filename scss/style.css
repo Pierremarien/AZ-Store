@@ -80,4 +80,10 @@ input {
 .form div #zipCode::-o-inner-spin-button {
   -o-appearance: none;
   margin: 0;
+}
+
+body footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em 0;
 }/*# sourceMappingURL=style.css.map */
