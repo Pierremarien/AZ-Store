@@ -49,6 +49,7 @@ input {
 }
 
 .form {
+  margin-top: 5em;
   display: flex;
   flex-direction: column;
   border: 2px solid #192231;
@@ -59,6 +60,7 @@ input {
 .form div {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 .form div label {
   color: #e5e7eb;
