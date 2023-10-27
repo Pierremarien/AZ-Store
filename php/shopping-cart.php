@@ -7,9 +7,11 @@ $products = json_decode($productsJson, true);
 $total = 0;
 
 //To delete items from the cart
-foreach ($_SESSION['article'] as $id => $quantity) {
-    if (isset($_GET["delete{$id}"])){
-        unset($_SESSION['article'][$id]);
+if (isset($_SESSION['article'])){
+    foreach ($_SESSION['article'] as $id => $quantity) {
+        if (isset($_GET["delete{$id}"])){
+            unset($_SESSION['article'][$id]);
+        }
     }
 }
 
