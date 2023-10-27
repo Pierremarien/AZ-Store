@@ -6,6 +6,13 @@ $productsJson = file_get_contents('../assets/products.json');
 $products = json_decode($productsJson, true);
 $total = 0;
 
+//To delete items from the cart
+foreach ($_SESSION['article'] as $id => $quantity) {
+    if (isset($_GET["delete{$id}"])){
+        unset($_SESSION['article'][$id]);
+    }
+}
+
 // echo '<pre>' ;
 // print_r($products);
 // echo '</pre>';
@@ -14,10 +21,13 @@ $total = 0;
 // print_r($_SESSION);
 // echo '</pre>';
 
-if (($products !== null) AND (isset($_SESSION['article'])) AND (!empty($_SESSION['article']))) {
+//Display items from the cart
+if (($products !== null) AND isset($_SESSION['article']) AND !empty($_SESSION['article'])) {
     foreach ($_SESSION['article'] as $id => $quantity) { ?>
         <div class="wrapCartArticle">
-            <a class="wrapCartArticle__delete" href="">Delete</a>
+            <form action="" method="get">
+                <input type="submit" name="delete<?= $id ?>" value="Delete">
+            </form>
             <img src="../<?= $products[$id-1]["image_url"] ?>" alt="Picture of a shoe" width="80" height="80">
             <div class="wrapCartArticle__wrapdetails">
                 <p class="wrapCartArticle__wrapdetails__product"><?= $products[$id-1]["product"] ?></p>
@@ -32,7 +42,10 @@ if (($products !== null) AND (isset($_SESSION['article'])) AND (!empty($_SESSION
     <p class="totalPrice"><?= $total ?></p>
     <?php
     
-    } else {
-        echo 'Error parsing JSON data.';
-    }?>
+} else if (!isset($_SESSION['article']) OR empty($_SESSION['article'])) { ?>
+    <p class="shoppingCartEmpty">Your cart is empty, select an item please</p>
+<?php 
+} else {
+    echo 'Error parsing JSON data.';
+}?>
 
