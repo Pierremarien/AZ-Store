@@ -1,0 +1,22 @@
+.wrapArticles{
+    width:80%;
+    margin:100px auto 10px auto;
+    padding: 0 10px 0 20px;
+    background-color: #fff;
+    color:black;
+}
+
+.shoppingCartEmpty{
+    text-align: center;
+}
+
+.checkout{
+   width:100%;
+   display: flex;
+   justify-content: flex-end;
+   padding:20px 0;
+   &__btn{
+        margin:0 10% 0 0;
+   }
+}
+
