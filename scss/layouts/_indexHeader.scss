@@ -1,0 +1,57 @@
+.index_header {
+    padding: 100px 180px 15px 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        
+        h1{
+            font-size: clamp(1.25rem, -2.2656rem + 11.25vw, 4.0625rem);
+            font-weight: 700;
+            text-transform: uppercase;
+
+            .left::after {
+                content: "\a";
+                white-space: pre;
+            }
+        }
+
+        .btn {
+            margin-top: 35px;
+        }
+    }
+
+    .best_shoe {
+        width: 750px;
+        height: 750px;
+        position: relative;
+        figure{
+            width: inherit;
+            height: inherit;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                z-index: 3;
+            }
+        }
+        
+        .filigrane {
+            font-size: 350px;
+            position: absolute;
+            top: 225px;
+            left: 0;
+            z-index: 2;
+            -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #353940;
+          
+        }
+    }
+    
+}
+
+.blue {
+    color: #2563eb;
+}

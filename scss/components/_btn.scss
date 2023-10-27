@@ -10,6 +10,7 @@
     max-width: 140px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
 
     &:hover{
@@ -24,4 +25,8 @@
         background: rgb(30,59,140);
         background: linear-gradient(264deg, rgba(30,59,140,1) 21%, rgba(58,126,241,1) 68%);
     }
+}
+
+a{
+    cursor: pointer;
 }
