@@ -105,6 +105,19 @@ input {
   background: linear-gradient(264deg, rgb(30, 59, 140) 21%, rgb(58, 126, 241) 68%);
 }
 
+body footer {
+  margin-top: 2em;
+  border-top: 1px solid #192231;
+}
+body footer ul {
+  display: flex;
+  justify-content: center;
+}
+body footer ul li {
+  font-size: 12px;
+  padding: 2em 1em;
+}
+
 nav {
   display: flex;
   width: 100%;
