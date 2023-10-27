@@ -54,12 +54,14 @@ input {
   flex-direction: column;
   border: 2px solid #192231;
   gap: 1rem;
-  width: 45%;
+  width: 80%;
   padding: 1em 0;
 }
 .form div {
+  width: 100%;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .form div label {
@@ -85,6 +87,22 @@ input {
   margin: 0;
 }
 
+@media only screen and (min-width: 612px) {
+  .form {
+    width: 35%;
+  }
+  .form div {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .form {
+    width: 60%;
+  }
+  .form div {
+    width: 100%;
+  }
+}
 .btn {
   background-color: #3b82f6;
   font-family: "Roboto", sans-serif;

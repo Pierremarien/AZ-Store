@@ -4,11 +4,14 @@
     flex-direction: column;
     border: 2px solid #192231;
     gap: 1rem;
-    width: 45%;
+    
+    width: 80%;
     padding: 1em 0;
     div{
+        width: 100%;
         display : flex;
         gap: 1rem;
+        flex-wrap: wrap;
         justify-content: center;
         label{
             color: #e5e7eb;
@@ -36,5 +39,23 @@
             }
         }
         
+    }
+}
+
+@media only screen and (min-width:612px){
+    .form{
+        width: 35%;
+        div{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .form{
+        width: 60%;
+        div{
+            width: 100%;
+        }
     }
 }
