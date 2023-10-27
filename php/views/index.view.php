@@ -33,10 +33,14 @@ require "partials/head.php";
                 foreach ($products as $product) {
                     
                     echo '<div class="product">';
-                    echo '<p class="product_name">' . $product['product'] . '</p>';
                     echo '<figure> <img src="../../' . $product['image_url'] . '" alt="' . $product['product'] . '"> </figure>';
-                    echo '<p class="product_price">Price: $' . $product['price'] . '</p>';
+                    echo '<div class="product_wrapper">';
+                    echo '<div class="product_wrapper_info">';
+                    echo '<p class="product_wrapper_info_name">' . $product['product'] . '</p>';
+                    echo '<p class="product_wrapper_info_price">' . $product['price'] . '&euro;</p>';
+                    echo '</div>';
                     echo "<a class='btn' href=\"../add-to-session.php?id={$product['id']}\">Add to cart</a>";
+                    echo '</div>';
                     echo '</div>';
                 }
             } else {
