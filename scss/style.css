@@ -135,6 +135,10 @@ nav div h5 {
   margin-right: 3em;
 }
 
+.nav_link {
+  font-weight: 500;
+}
+
 body footer {
   margin-top: 2em;
   border-top: 1px solid #192231;
