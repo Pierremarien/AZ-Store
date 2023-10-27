@@ -22,7 +22,7 @@ require "partials/head.php";
     <main>
         <section class="latest_products">
             <h3><span class="blue">Our</span> last products</h3>
-            
+            <div class="latest_products_wrapper">
             <?php
             
             $productsJson = file_get_contents('../assets/products.json');
@@ -48,7 +48,7 @@ require "partials/head.php";
             }
 
             ?>
-
+            </div>
         </section>
         <section class="pub">
             <figure>
