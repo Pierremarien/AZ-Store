@@ -12,7 +12,7 @@
                 </ul>
             </div>
             <div class="navbar_right">
-            <a href="./shopping-cart.view.php">
+            <a href="./shopping-cart.php">
             <svg fill="#e5e7eb" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
             width="27px" height="27px" viewBox="0 0 902.86 902.86"
             xml:space="preserve">
