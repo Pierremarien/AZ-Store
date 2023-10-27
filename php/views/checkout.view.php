@@ -30,9 +30,12 @@ if (($products !== null) AND (isset($_SESSION['article'])) AND (!empty($_SESSION
 
     <?php
     
-    } else {
-        echo 'Your cart is empty, select an item please.';
-    }
+} else if (!isset($_SESSION['article']) OR empty($_SESSION['article'])) { ?>
+    <p class="shoppingCartEmpty">Your cart is empty, select an item please</p>
+<?php 
+} else {
+    echo 'Error parsing JSON data.';
+}
 
 // fonction de validation et d'assainisement des données du formulaire
 
