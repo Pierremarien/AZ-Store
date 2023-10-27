@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -65,4 +66,38 @@ input {
   background-color: #3b82f6;
   color: #e5e7eb;
   border: none;
+}
+
+.btn {
+  background-color: #3b82f6;
+  font-family: "Roboto", sans-serif;
+  color: #e5e7eb;
+  font-size: 1.2em;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+}
+.btn:hover {
+  scale: 1.05;
+  box-shadow: 1px -1px 7px 6px rgba(205, 217, 237, 0.39);
+  -webkit-box-shadow: 1px -1px 7px 6px rgba(205, 217, 237, 0.39);
+  -moz-box-shadow: 1px -1px 7px 6px rgba(205, 217, 237, 0.39);
+  background-color: #5c8ad4;
+}
+.btn--store {
+  background: rgb(30, 59, 140);
+  background: linear-gradient(264deg, rgb(30, 59, 140) 21%, rgb(58, 126, 241) 68%);
+}
+
+body {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgb(0, 0, 0) 4%, rgb(17, 24, 39) 85%);
+  font-family: "Roboto", sans-serif;
+  color: #e5e7eb;
+}
+
+a {
+  color: #e5e7eb;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
