@@ -5,7 +5,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a class="nav_link" href="./index.view.php">Home</a></li>
+                    <li><a class="nav_link" href="index.view.php">Home</a></li>
                     <li><a class="nav_link" href="#">About</a></li>
                     <li><a class="nav_link" href="#">Product</a></li>
                     <li><a class="nav_link" href="#">Contact</a></li>
