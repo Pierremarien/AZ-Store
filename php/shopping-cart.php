@@ -21,6 +21,7 @@ foreach ($_SESSION['article'] as $id => $quantity) {
 // print_r($_SESSION);
 // echo '</pre>';
 
+//Display items from the cart
 if (($products !== null) AND isset($_SESSION['article']) AND !empty($_SESSION['article'])) {
     foreach ($_SESSION['article'] as $id => $quantity) { ?>
         <div class="wrapCartArticle">
