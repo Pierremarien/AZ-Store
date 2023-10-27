@@ -1,9 +1,41 @@
 <?php
+session_start();
+// import des partials head et navbar
 require "partials/head.php";
 
 require "partials/nav.php";
 
-// var_dump($_POST);
+$productsJson = file_get_contents('../../assets/products.json');
+$products = json_decode($productsJson, true);
+$total = 0;
+
+// ajout du panier dans la page checkout
+
+if (($products !== null) AND (isset($_SESSION['article'])) AND (!empty($_SESSION['article']))) {
+    foreach ($_SESSION['article'] as $id => $quantity) { ?>
+        <div class="wrapCartArticle">
+            <a class="wrapCartArticle__delete" href="">Delete</a>
+            <img src="../<?= $products[$id-1]["image_url"] ?>" alt="Picture of a shoe" width="80" height="80">
+            <div class="wrapCartArticle__wrapdetails">
+                <p class="wrapCartArticle__wrapdetails__product"><?= $products[$id-1]["product"] ?></p>
+                <p class="wrapCartArticle__wrapdetails__price"><?= $products[$id-1]["price"] ?></p>
+            </div>
+            <p class="wrapCartArticle__quantity"><?= $quantity ?></p>
+            <p class="wrapCartArticle__subtotal"><?= $quantity * $products[$id-1]["price"]?></p>
+        </div>
+        <?php $total += $quantity * $products[$id-1]["price"];
+    }?>
+    
+    <p class="totalPrice"><?= $total ?></p>
+
+    <?php
+    
+    } else {
+        echo 'Your cart is empty, select an item please.';
+    }
+
+// fonction de validation et d'assainisement des données du formulaire
+
 function sanitizeValidation ($_post) {
     if (isset($_POST["firstName"]) and !empty($_POST["firstName"]) and strlen($_POST["firstName"]) > 2 and strlen($_POST["firstName"]) < 20) {
         $firstName = htmlspecialchars($_POST["firstName"]);
@@ -59,15 +91,18 @@ function sanitizeValidation ($_post) {
             "country" => $country
         );
     }
-    // echo "<pre>";
-    // var_dump($sanitizedData);
-    // echo "</pre>";
+    
 }
+
+// sur le click du submit, on lance la fonction de validation et d'assainisement des données du formulaire
 
 if(array_key_exists('submit', $_POST)) { 
     sanitizeValidation($_POST);
+    unset($_SESSION['article']);
 } 
 ?>
+
+<!-- formulaire de commande -->
 
 <form method="POST" action="" class="form">
     <div>
@@ -105,6 +140,8 @@ if(array_key_exists('submit', $_POST)) {
 </form>
 
 <?php
+
+// import du footer
 
 require "partials/footer.php";
 ?>
