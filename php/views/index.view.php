@@ -14,7 +14,7 @@ require "partials/head.php";
         </div>
         <div class="best_shoe">
             <figure>
-                <img src="../../assets/img/shoe_one.png" alt="our best shoe">
+                <img src="../assets/img/shoe_one.png" alt="our best shoe">
             </figure>
             <span class="filigrane">NIKE</span>       
         </div>
@@ -25,7 +25,7 @@ require "partials/head.php";
             
             <?php
             
-            $productsJson = file_get_contents('../../assets/products.json');
+            $productsJson = file_get_contents('../assets/products.json');
             $products = json_decode($productsJson, true);
 
             
@@ -33,13 +33,13 @@ require "partials/head.php";
                 foreach ($products as $product) {
                     
                     echo '<div class="product">';
-                    echo '<figure> <img src="../../' . $product['image_url'] . '" alt="' . $product['product'] . '"> </figure>';
+                    echo '<figure> <img src="../' . $product['image_url'] . '" alt="' . $product['product'] . '"> </figure>';
                     echo '<div class="product_wrapper">';
                     echo '<div class="product_wrapper_info">';
                     echo '<p class="product_wrapper_info_name">' . $product['product'] . '</p>';
                     echo '<p class="product_wrapper_info_price">' . $product['price'] . '&euro;</p>';
                     echo '</div>';
-                    echo "<a class='btn' href=\"../add-to-session.php?id={$product['id']}\">Add to cart</a>";
+                    echo "<a class='btn' href=\"add-to-session.php?id={$product['id']}\">Add to cart</a>";
                     echo '</div>';
                     echo '</div>';
                 }
@@ -52,7 +52,7 @@ require "partials/head.php";
         </section>
         <section class="pub">
             <figure>
-                <img src="../../assets/img/shoe_two.png" alt="our second best shoe">
+                <img src="../assets/img/shoe_two.png" alt="our second best shoe">
             </figure>
             <h2>We provide you the <span class="blue">best</span> quality</h2>
             <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae mollitia cum saepe consequatur iste odio magni adipisci odit nulla, quae omnis a?"</p>
@@ -60,21 +60,21 @@ require "partials/head.php";
         <section class="partners">
             <div class="partner">
                 <figure>
-                    <img src="../../assets/img/image-emily.jpg" alt="this is emily">
+                    <img src="../assets/img/image-emily.jpg" alt="this is emily">
                 </figure>
                 <h4>Emily from xyz</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error aut harum veniam dolores vitae!</p>
             </div>
             <div class="partner">
                 <figure>
-                    <img src="../../assets/img/image-thomas.jpg" alt="this is thomas">
+                    <img src="../assets/img/image-thomas.jpg" alt="this is thomas">
                 </figure>
                 <h4>Thomas from corporate</h4>
                 <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error aut harum veniam dolores vitae!"</p>
             </div>
             <div class="partner">
                 <figure>
-                    <img src="../../assets/img/image-jennie.jpg" alt="this is jennie">
+                    <img src="../assets/img/image-jennie.jpg" alt="this is jennie">
                 </figure>
                 <h4>Jennie from Nike</h4>
                 <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error aut harum veniam dolores vitae!"</p>

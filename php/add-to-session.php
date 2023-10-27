@@ -8,4 +8,4 @@ if (isset($_GET['id'])){
         $_SESSION['article'][$_GET['id']] = 1;
     } 
 }
-header('location:views/index.view.php');
+header('location:index.php');
