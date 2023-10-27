@@ -11,23 +11,36 @@ $total = 0;
 
 // ajout du panier dans la page checkout
 
-if (($products !== null) AND (isset($_SESSION['article'])) AND (!empty($_SESSION['article']))) {
+?>
+<div class="wrapArticles">
+    <div class="wrapCartArticle wrapCartArticle__title">
+            <div class="wrapCartArticle__wrapdetails">Article</div>
+            <p class="wrapCartArticle__quantity">Quantity</p>
+            <p class="wrapCartArticle__subtotal">Total</p>
+    </div>
+<?php 
+if (($products !== null) AND isset($_SESSION['article']) AND !empty($_SESSION['article'])) {
     foreach ($_SESSION['article'] as $id => $quantity) { ?>
-        <div class="wrapCartArticle">
-            <a class="wrapCartArticle__delete" href="">Delete</a>
-            <img src="../<?= $products[$id-1]["image_url"] ?>" alt="Picture of a shoe" width="80" height="80">
+        <div class="wrapCartArticle wrapCartArticle__item">
+            <form action="" method="">
+                <button class="wrapCartArticle__delete" type="submit" name="delete<?= $id ?>" value="Delete">
+                    <!-- <img src="../../assets/img/trash-can-solid.svg" width="20" alt="trash"> -->
+                </button>
+            </form>
+            <img src="../../<?= $products[$id-1]["image_url"] ?>" alt="Picture of a shoe" width="50" height="50">
             <div class="wrapCartArticle__wrapdetails">
                 <p class="wrapCartArticle__wrapdetails__product"><?= $products[$id-1]["product"] ?></p>
-                <p class="wrapCartArticle__wrapdetails__price"><?= $products[$id-1]["price"] ?></p>
+                <p class="wrapCartArticle__wrapdetails__price"><?= $products[$id-1]["price"] ?> €</p>
             </div>
             <p class="wrapCartArticle__quantity"><?= $quantity ?></p>
-            <p class="wrapCartArticle__subtotal"><?= $quantity * $products[$id-1]["price"]?></p>
+            <p class="wrapCartArticle__subtotal"><?= $quantity * $products[$id-1]["price"]?> €</p>
         </div>
         <?php $total += $quantity * $products[$id-1]["price"];
     }?>
-    
-    <p class="totalPrice"><?= $total ?></p>
-
+    <div class="wrapCartArticle">
+        <p class="wrapCartArticle__totalPrice"><?= $total ?> €</p>
+    </div>
+    </div>
     <?php
     
 } else if (!isset($_SESSION['article']) OR empty($_SESSION['article'])) { ?>
@@ -35,7 +48,11 @@ if (($products !== null) AND (isset($_SESSION['article'])) AND (!empty($_SESSION
 <?php 
 } else {
     echo 'Error parsing JSON data.';
-}
+}?>
+
+</div>
+
+<?php 
 
 // fonction de validation et d'assainisement des données du formulaire
 
