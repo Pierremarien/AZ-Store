@@ -372,4 +372,22 @@ a {
 }
 .checkout__btn {
   margin: 0 10% 0 0;
+}
+
+.pub {
+  width: 50%;
+  margin: auto;
+}
+.pub__img {
+  display: block;
+  margin: auto;
+}
+.pub__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 65px;
+  font-weight: bold;
+}
+.pub__text {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

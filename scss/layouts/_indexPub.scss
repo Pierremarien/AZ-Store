@@ -1,0 +1,17 @@
+.pub{
+    width:50%;
+    margin:auto;
+    &__img{
+        display: block;
+        margin:auto;
+    }
+    &__title{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 65px;
+        font-weight: bold;
+    }
+    &__text{
+        text-align: center;
+    }
+}
