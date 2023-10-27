@@ -1,0 +1,29 @@
+.index_header {
+    padding: 100px 180px 15px 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        
+        h1{
+            font-size: clamp(1.25rem, -2.2656rem + 11.25vw, 4.0625rem);
+            font-weight: 700;
+            text-transform: uppercase;
+
+            .left::after {
+                content: "\a";
+                white-space: pre;
+            }
+        }
+
+        .btn {
+            margin-top: 35px;
+        }
+    }
+    
+}
+
+.blue {
+    color: #2563eb;
+}

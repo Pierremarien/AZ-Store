@@ -4,12 +4,12 @@ require "partials/head.php";
 ?>
 
 
-    <header>
+    <header class="index_header">
         <?php
         require "partials/nav.php";
         ?>
         <div class="title">
-            <h1>Shoe the right <span class="blue">one</span></h1>
+            <h1><span class="left">Shoe the </span>right <span class="blue">one</span>.</h1>
             <button class="btn btn--store">See our store</button>
         </div>
         <div class="best_shoe">
