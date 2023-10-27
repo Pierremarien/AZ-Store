@@ -5,7 +5,7 @@ require "partials/head.php";
 
 require "partials/nav.php";
 
-$productsJson = file_get_contents('../../assets/products.json');
+$productsJson = file_get_contents('../assets/products.json');
 $products = json_decode($productsJson, true);
 $total = 0;
 
@@ -27,7 +27,7 @@ if (($products !== null) AND isset($_SESSION['article']) AND !empty($_SESSION['a
                     <!-- <img src="../../assets/img/trash-can-solid.svg" width="20" alt="trash"> -->
                 </button>
             </form>
-            <img src="../../<?= $products[$id-1]["image_url"] ?>" alt="Picture of a shoe" width="50" height="50">
+            <img src="../<?= $products[$id-1]["image_url"] ?>" alt="Picture of a shoe" width="50" height="50">
             <div class="wrapCartArticle__wrapdetails">
                 <p class="wrapCartArticle__wrapdetails__product"><?= $products[$id-1]["product"] ?></p>
                 <p class="wrapCartArticle__wrapdetails__price"><?= $products[$id-1]["price"] ?> €</p>
