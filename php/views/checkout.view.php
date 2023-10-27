@@ -31,7 +31,7 @@ if (($products !== null) AND (isset($_SESSION['article'])) AND (!empty($_SESSION
     <?php
     
     } else {
-        echo 'Your cart is empty, select an item please';
+        echo 'Your cart is empty, select an item please.';
     }
 
 // fonction de validation et d'assainisement des données du formulaire
